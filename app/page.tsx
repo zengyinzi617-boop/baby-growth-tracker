@@ -5,10 +5,11 @@ import { createClient } from '@/utils/supabase/client'
 import LoginPage from '@/components/LoginPage'
 import MainApp from '@/components/MainApp'
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  const supabase = createClient()
 
   useEffect(() => {
     const checkAuth = async () => {
